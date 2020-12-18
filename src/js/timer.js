@@ -34,7 +34,7 @@ class Timer {
   }
   count() {
     let x = setTime(new Date(this.date) - Date.now());
-    //console.log(x);
+
     this.refs.days.textContent = x.days;
     this.refs.hours.textContent = x.hours;
     this.refs.mins.textContent = x.mins;
