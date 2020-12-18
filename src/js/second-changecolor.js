@@ -1,5 +1,4 @@
 import btnRefs from "../refs/change-color-refs"; // TODO: Доступ к нашим кнопкам
-console.log(btnRefs);
 
 const colors = [
   "#FFFFFF",
@@ -9,8 +8,6 @@ const colors = [
   "#009688",
   "#795548",
 ];
-console.log(colors);
-
 // TODO: Функции
 
 function randomIntegerFromInterval(max) {

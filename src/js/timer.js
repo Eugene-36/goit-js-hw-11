@@ -48,6 +48,5 @@ class Timer {
   }
 }
 const timer = new Timer(day, refs);
-console.log(timer);
 
 timer.start();
