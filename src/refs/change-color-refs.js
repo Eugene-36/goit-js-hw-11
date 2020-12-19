@@ -1,6 +1,14 @@
 export default {
-  startChange: document.querySelector('[data-action="set-start"]'),
-  stopChange: document.querySelector('[data-action="set-stop"]'),
+  startChange: document.getElementById("buttonRemove"),
+  stopChange: document.getElementById("buttonRemove"),
+
   body: document.querySelector("body"),
 };
 //console.log(startChange);
+// Отключение элемента
+
+//document.getElementById('buttonRemove').setAttribute("disabled", "true");
+
+// Задействование элемента путём снятия атрибута "disabled"
+
+//document.getElementById('buttonRemove').removeAttribute("disabled");

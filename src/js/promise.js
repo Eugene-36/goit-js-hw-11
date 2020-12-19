@@ -3,18 +3,18 @@
 
 const delay = (ms) => {
   // Твой код
-  const promise = new Promise((resolve, reject) => {
+  return (promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(ms);
     }, ms);
-  }).then(logger);
+  }));
 };
 const logger = (time) => console.log(`Resolved after ${time}ms`);
 
 // Вызовы функции для проверки
-delay(2000); // Resolved after 2000ms
-delay(1000); // Resolved after 1000ms
-delay(1500); // Resolved after 1500ms
+delay(2000).then(logger); // Resolved after 2000ms
+delay(1000).then(logger); // Resolved after 1000ms
+delay(1500).then(logger); // Resolved after 1500ms
 
 // ! 3
 // TODO: Перепиши функцию makeTransaction() так, чтобы она не использовала

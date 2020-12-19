@@ -40,7 +40,11 @@ class Timer {
     this.refs.mins.textContent = x.mins;
     this.refs.secs.textContent = x.seconds;
   }
-
+  add() {
+    setInterval(() => {
+      this.count();
+    }, 0);
+  }
   start() {
     setInterval(() => {
       this.count();
@@ -48,5 +52,5 @@ class Timer {
   }
 }
 const timer = new Timer(day, refs);
-
+timer.add();
 timer.start();

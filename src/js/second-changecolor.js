@@ -19,15 +19,23 @@ function setRandomColor() {
   console.log(color);
   document.body.style.backgroundColor = color;
 }
+let interval = null;
 
-let interval = undefined;
+const accessStart = document.getElementById("buttonAdd");
+const accesStop = document.getElementById("buttonRemove");
+accessStart.addEventListener("click", setAttribute);
+accesStop.addEventListener("click", deleteAttribute);
 
-btnRefs.startChange.addEventListener(
-  "click",
-  (e) =>
-    (interval = interval
-      ? interval
-      : setInterval(() => setRandomColor(), 1000)),
-);
+function setAttribute() {
+  if (accessStart) {
+    accessStart.setAttribute("disabled", "true");
+  }
+  interval = setInterval(() => setRandomColor(), 1000);
+}
 
-btnRefs.stopChange.addEventListener("click", (e) => clearInterval(interval));
+function deleteAttribute() {
+  if (accesStop) {
+    accessStart.removeAttribute("disabled");
+    clearInterval(interval);
+  }
+}
