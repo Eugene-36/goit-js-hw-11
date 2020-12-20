@@ -40,17 +40,14 @@ class Timer {
     this.refs.mins.textContent = x.mins;
     this.refs.secs.textContent = x.seconds;
   }
-  add() {
-    setInterval(() => {
-      this.count();
-    }, 0);
-  }
+
   start() {
+    this.count();
     setInterval(() => {
       this.count();
     }, 1000);
   }
 }
 const timer = new Timer(day, refs);
-timer.add();
+// timer.add();
 timer.start();
